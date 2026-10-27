@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mnemo — 나를 기억하는 AI</title>
+<meta name="description" content="어떤 AI 도구에서든 나에 대한 기억과 이전 대화의 맥락을 이어주는 개인 기억 Agent">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  main { max-width: 760px; margin: 0 auto; padding: var(--s-7) var(--s-4); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-7); }
+  section { display: grid; gap: var(--s-4); }
+  .eyebrow { color: var(--accent); font-size: 13px; font-weight: 650; letter-spacing: 0.02em; }
+  .hero { gap: var(--s-4); padding-top: var(--s-6); }
+  .hero h1 { font-size: 40px; letter-spacing: -0.035em; }
+  .hero p { margin: 0; font-size: 17px; color: var(--text-2); max-width: 560px; }
+  .lead { margin: 0; color: var(--text-2); }
+  .row { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s-3); }
+  .card p { margin: var(--s-2) 0 0; }
+  .card h3 { font-size: 15px; font-weight: 650; }
+  .step { color: var(--text-3); font: 600 12px var(--mono); }
+  .quote { border-left: 2px solid var(--border); padding-left: var(--s-4); color: var(--text-2); margin: 0; }
+  pre { margin: 0; padding: var(--s-4); background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
+    font: 13px/1.7 var(--mono); color: var(--text-2); white-space: pre-wrap; word-break: break-word; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  td, th { text-align: left; padding: var(--s-3) var(--s-2); border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--text-3); font-weight: 550; font-size: 12px; }
+  td:first-child { white-space: nowrap; color: var(--text-2); }
+  footer { border-top: 1px solid var(--border); padding-top: var(--s-5); }
+  @media (max-width: 560px) { .hero h1 { font-size: 30px; } }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <span class="eyebrow">MNEMO · 개인 기억 Agent</span>
+    <h1>나를 기억하는 AI</h1>
+    <p>어떤 AI 도구를 쓰든, 내가 누구인지와 함께 해온 일을 처음부터 다시 설명하지 않아도 되도록. Mnemo는 나에 대한 기억을 한곳에 모아 어디서든 같은 맥락으로 이어줍니다.</p>
+    <div class="row">
+      <a class="btn btn-primary" href="/">Mnemo 열기</a>
+      <a class="btn btn-ghost" href="https://github.com/stevean84/mnemo">GitHub</a>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">문제</span>
+    <h2>AI는 매번 나를 처음 만납니다</h2>
+    <blockquote class="quote">ChatGPT, Codex, Claude Code를 오갈 때마다 내 직업과 기술 스택, 진행 중인 프로젝트를 다시 설명해야 한다.</blockquote>
+    <p class="lead">도구마다 기억이 따로 있거나 아예 없어서, 대화가 바뀌면 맥락이 끊깁니다. 내가 어떤 사람이고 무엇을 해왔는지는 하나인데, 그 정보는 여러 곳에 흩어져 있습니다.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">어떻게</span>
+    <h2>기억하고, 찾고, 건네줍니다</h2>
+    <div class="grid">
+      <article class="card"><span class="step">01</span><h3>기억하기</h3><p>성격·직업·가족·기술·함께한 일·대화 요약으로 나눠 저장합니다. 민감한 내용은 비공개로 표시합니다.</p></article>
+      <article class="card"><span class="step">02</span><h3>찾기</h3><p>단어와 종류로 바로 검색합니다. Web 화면과 명령어 도구가 같은 저장소를 씁니다.</p></article>
+      <article class="card"><span class="step">03</span><h3>건네주기</h3><p>버튼 하나로 "나에 대한 기억"을 Markdown으로 복사해 어떤 AI 대화창에든 붙여넣습니다.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">기억의 모양</span>
+    <h2>기억 하나는 카드 하나</h2>
+    <article class="card">
+      <div class="row"><span class="chip on">기술</span><small>예시 · cli</small></div>
+      <p>주력 언어는 TypeScript, 백엔드는 NestJS를 주로 쓴다.</p>
+    </article>
+    <article class="card">
+      <div class="row"><span class="chip on">함께한 일</span><small>예시 · web</small></div>
+      <p>AI 동아리에서 개인 서비스를 만들고 있다.</p>
+    </article>
+    <article class="card">
+      <div class="row"><span class="chip on">가족</span><span class="chip chip-private">비공개</span><small>예시 · web</small></div>
+      <p>비공개 기억은 내 화면에서만 보이고, AI에게 건네는 context에서는 기본으로 빠집니다.</p>
+    </article>
+  </section>
+
+  <section>
+    <span class="eyebrow">AI에게 건네는 context</span>
+    <h2>붙여넣으면, AI가 나를 아는 상태로 시작합니다</h2>
+<pre># 나에 대한 기억 (Mnemo)
+
+아래는 사용자에 대해 저장된 기억이다. 답변할 때 이 맥락을 참고하고,
+기억과 다른 내용은 사용자에게 확인한다.
+
+## 기술
+- 주력 언어는 TypeScript, 백엔드는 NestJS를 주로 쓴다
+
+## 함께한 일
+- AI 동아리에서 개인 서비스를 만들고 있다</pre>
+  </section>
+
+  <section>
+    <span class="eyebrow">원칙</span>
+    <h2>내 기억은 내 컴퓨터에</h2>
+    <div class="grid">
+      <article class="card"><h3>Local-first</h3><p>기억은 내 컴퓨터의 SQLite 파일에만 저장됩니다. 서버도 localhost에서만 열립니다.</p></article>
+      <article class="card"><h3>하나의 저장소</h3><p>Web·CLI, 그리고 앞으로 붙을 VSCode·Chrome·MCP가 모두 같은 API로 같은 기억을 씁니다.</p></article>
+      <article class="card"><h3>민감도 구분</h3><p>가족·개인정보 같은 기억은 비공개로 두고, 내보낼 때 기본으로 제외합니다.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">어디서든</span>
+    <h2>지금 쓸 수 있는 곳과 다음 단계</h2>
+    <div class="row">
+      <span class="chip on">Web UI</span><span class="chip on">CLI</span>
+      <span class="chip">MCP 서버 · 예정</span><span class="chip">VSCode 확장 · 예정</span><span class="chip">Chrome 확장 · 예정</span>
+    </div>
+    <table>
+      <thead><tr><th>단계</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>지금 (v0.1)</td><td>로컬 기억 저장소, Web UI, CLI, context 내보내기</td></tr>
+        <tr><td>다음</td><td>웹 배포와 휴대폰에서 열기</td></tr>
+        <tr><td>그다음</td><td>대화에서 기억할 내용을 골라 저장하는 기억 정리 스킬</td></tr>
+        <tr><td>그다음</td><td>저장된 기억으로 답하는 AI 기능, MCP로 Claude Code·Codex 연결</td></tr>
+        <tr><td>이후</td><td>VSCode·Chrome 확장 — 어디서 쓰든 같은 나</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="row">
+    <small>Mnemo v0.1 · ATTENTION 2026-2 개인 프로젝트 · <a href="https://github.com/stevean84" style="color: var(--accent)">stevean84</a></small>
+  </footer>
+</main>
+</body>
+</html>

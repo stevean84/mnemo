@@ -8,6 +8,7 @@
 - [x] requirements.md 작성
 - [x] 제작, `npm test` 통과, localhost:4747 실행
 - [x] 시작·종료 방법을 README에 기록
+- [x] 디자인 스킬로 소개 화면 제작 (`public/about.html`, /about.html)
 - [ ] Web 화면 직접 클릭 확인 (사람)
 - [ ] GitHub 업로드·파일 확인
 

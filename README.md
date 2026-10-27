@@ -51,7 +51,7 @@ node bin/mnemo.js context | pbcopy      # context를 클립보드로
 ```
 src/server.js   HTTP 서버 + API + 정적 파일
 src/db.js       SQLite 저장소, 검증, context 생성
-public/         Web UI (mnemo-design 토큰 사용)
+public/         Web UI + 소개 페이지 about.html (mnemo-design 토큰 사용)
 bin/mnemo.js    CLI
 skills/         이 프로젝트에서 만든 개인 스킬 (voice-summary, mnemo-design)
 test/           API 테스트

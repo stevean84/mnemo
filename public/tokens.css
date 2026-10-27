@@ -50,7 +50,7 @@ small, .meta { color: var(--text-3); font-size: 12px; }
 
 .btn { display: inline-flex; align-items: center; gap: var(--s-2); height: 36px; padding: 0 var(--s-4);
   border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg); color: var(--text);
-  font: inherit; font-size: 14px; font-weight: 550; cursor: pointer; }
+  font: inherit; font-size: 14px; font-weight: 550; text-decoration: none; cursor: pointer; }
 .btn:hover { background: var(--surface); }
 .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent); filter: brightness(1.08); }
