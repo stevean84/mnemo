@@ -1,0 +1,68 @@
+/* Mnemo design tokens — 모던·미니멀. 이 파일을 그대로 복사해 쓰고, 값은 여기서만 바꾼다. */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+:root {
+  --font: "Pretendard Variable", Pretendard, -apple-system, system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+  --border: #e6e6ea;
+  --text: #18181b;
+  --text-2: #5f5f6b;
+  --text-3: #9a9aa5;
+  --accent: #4f46e5;
+  --accent-soft: #eef0ff;
+  --danger: #dc2626;
+  --private: #b45309;
+  --private-soft: #fff7ed;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px;
+  --shadow: 0 1px 2px rgb(0 0 0 / .04), 0 4px 16px rgb(0 0 0 / .04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0f12; --surface: #18181d; --border: #2a2a31;
+    --text: #f4f4f5; --text-2: #a1a1aa; --text-3: #6b6b75;
+    --accent: #818cf8; --accent-soft: #1e1b4b;
+    --private: #fbbf24; --private-soft: #2a1f0a;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0f12; --surface: #18181d; --border: #2a2a31;
+  --text: #f4f4f5; --text-2: #a1a1aa; --text-3: #6b6b75;
+  --accent: #818cf8; --accent-soft: #1e1b4b;
+  --private: #fbbf24; --private-soft: #2a1f0a;
+  --shadow: none;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { margin: 0; letter-spacing: -0.02em; line-height: 1.3; }
+h1 { font-size: 24px; font-weight: 700; }
+h2 { font-size: 17px; font-weight: 650; }
+small, .meta { color: var(--text-3); font-size: 12px; }
+
+.btn { display: inline-flex; align-items: center; gap: var(--s-2); height: 36px; padding: 0 var(--s-4);
+  border: 1px solid var(--border); border-radius: var(--r-md); background: var(--bg); color: var(--text);
+  font: inherit; font-size: 14px; font-weight: 550; cursor: pointer; }
+.btn:hover { background: var(--surface); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent); filter: brightness(1.08); }
+.btn-ghost { border-color: transparent; color: var(--text-2); }
+.btn-danger { color: var(--danger); }
+
+.input, select.input, textarea.input { width: 100%; padding: 9px var(--s-3); border: 1px solid var(--border);
+  border-radius: var(--r-md); background: var(--bg); color: var(--text); font: inherit; }
+.input:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+.card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--s-4) var(--s-5); box-shadow: var(--shadow); }
+.chip { display: inline-flex; align-items: center; height: 24px; padding: 0 var(--s-3); border-radius: 999px;
+  background: var(--surface); color: var(--text-2); font-size: 12px; font-weight: 550; border: 1px solid transparent; cursor: pointer; }
+.chip[aria-pressed="true"], .chip.on { background: var(--accent-soft); color: var(--accent); }
+.chip-private { background: var(--private-soft); color: var(--private); }

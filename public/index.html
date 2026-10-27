@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mnemo</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main>
+  <header class="top">
+    <div>
+      <h1>Mnemo</h1>
+      <p class="meta">어디서 쓰든 나를 기억하는 AI · <span id="status">연결 중…</span></p>
+    </div>
+    <button class="btn" id="copy-context" type="button">AI에게 줄 context 복사</button>
+  </header>
+
+  <form class="card composer" id="composer">
+    <textarea class="input" id="content" rows="3" maxlength="2000"
+      placeholder="기억할 내용을 적어주세요. 예) 주력 언어는 TypeScript, 백엔드는 NestJS를 주로 쓴다."></textarea>
+    <div class="composer-row">
+      <select class="input" id="kind" aria-label="기억 종류"></select>
+      <input class="input" id="tags" placeholder="태그 (쉼표로 구분)">
+      <label class="private-toggle"><input type="checkbox" id="private"> 비공개</label>
+      <button class="btn btn-primary" type="submit">기억 추가</button>
+    </div>
+    <p class="meta hint">⌘/Ctrl + Enter 로 바로 추가 · 비공개 기억은 context 복사에서 빠집니다</p>
+  </form>
+
+  <section class="filters">
+    <input class="input" id="q" type="search" placeholder="기억 검색…" aria-label="기억 검색">
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <p class="meta" id="summary"></p>
+  <section id="list" class="list" aria-live="polite"></section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js" type="module"></script>
+</body>
+</html>

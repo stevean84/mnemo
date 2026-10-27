@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mnemo 디자인 가이드</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  main { max-width: 760px; margin: 0 auto; padding: var(--s-7) var(--s-4); display: grid; gap: var(--s-6); }
+  .row { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; }
+  .sw { width: 112px; } .sw div { height: 56px; border-radius: var(--r-md); border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<main>
+  <header><h1>Mnemo</h1><p class="meta">나를 기억하는 AI — 디자인 가이드</p></header>
+  <section><h2>색</h2><div class="row" style="margin-top:12px">
+    <div class="sw"><div style="background:var(--bg)"></div><small>--bg</small></div>
+    <div class="sw"><div style="background:var(--surface)"></div><small>--surface</small></div>
+    <div class="sw"><div style="background:var(--text)"></div><small>--text</small></div>
+    <div class="sw"><div style="background:var(--accent)"></div><small>--accent</small></div>
+    <div class="sw"><div style="background:var(--private)"></div><small>--private</small></div>
+  </div></section>
+  <section><h2>버튼 · 입력 · 칩</h2>
+    <div class="row" style="margin-top:12px"><button class="btn btn-primary">기억 추가</button><button class="btn">내보내기</button><button class="btn btn-ghost">취소</button><button class="btn btn-ghost btn-danger">삭제</button></div>
+    <div class="row" style="margin-top:12px"><input class="input" placeholder="기억 검색…" style="max-width:320px"><span class="chip on">전체</span><span class="chip">기술</span><span class="chip">직업</span><span class="chip chip-private">비공개</span></div>
+  </section>
+  <section><h2>기억 카드</h2>
+    <article class="card" style="margin-top:12px">
+      <div class="row"><span class="chip on">기술</span><small>2026-10-27 · cli</small></div>
+      <p style="margin:8px 0 0">주력 언어는 TypeScript, 백엔드는 NestJS를 주로 사용한다.</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>
