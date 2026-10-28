@@ -10,7 +10,7 @@
 - [x] 시작·종료 방법을 README에 기록
 - [x] 디자인 스킬로 소개 화면 제작 (`public/about.html`, /about.html)
 - [ ] Web 화면 직접 클릭 확인 (사람)
-- [ ] GitHub 업로드·파일 확인
+- [x] GitHub 업로드·파일 확인 (https://github.com/stevean84/mnemo)
 
 ## 남은 문제와 다음 요청
 - 기억 수정 UI

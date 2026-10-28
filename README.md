@@ -70,4 +70,4 @@ AGENTS.md       AI 작업 규칙 · requirements.md 제작 지시서
 - 휴대폰 접속·배포 (3차시), AI 답변 기능·MCP 서버 (5차시), VSCode·Chrome 확장 (이후)
 
 ## GitHub
-- 저장소 주소: https://github.com/stevean84/mnemo (업로드 후 확인)
+- 저장소 주소: https://github.com/stevean84/mnemo (Public, 2026-10-28 업로드)
